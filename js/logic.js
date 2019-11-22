@@ -43,7 +43,7 @@ function passType() {
         num.push(4);
     }
 }
-console.log(passType());
+//console.log(passType());
 
 //generate random function calls for given times
 function generate() {
@@ -64,5 +64,21 @@ function generate() {
         //passWord.concat(char);
     }
 }
-console.log(generate());
-console.log(passWord);
+//console.log(generate());
+//console.log(passWord);
+//Called from outside
+var pressIt = document.querySelector("#generate");
+var basketTag = document.querySelector("#password");
+var copyCat = document.querySelector("#copy");
+
+pressIt.addEventListener("click", function() {
+    passType();
+    generate();
+    basketTag.textContent = passWord;
+});
+copyCat.addEventListener("click", function() {
+    var copyText = document.getElementById("password");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+});
