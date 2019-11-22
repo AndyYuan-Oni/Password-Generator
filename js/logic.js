@@ -1,5 +1,6 @@
 var num = [];
 var pLength = parseInt(prompt("How long do you need your Password be?(Enter number from 8-128)"));
+alert("Press Generate Password to go!");
 var passWord = ("");
 
 //Generate random special
@@ -72,6 +73,7 @@ var basketTag = document.querySelector("#password");
 var copyCat = document.querySelector("#copy");
 
 pressIt.addEventListener("click", function() {
+    basketTag.textContent = "";
     passType();
     generate();
     basketTag.textContent = passWord;
