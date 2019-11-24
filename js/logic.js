@@ -73,7 +73,9 @@ var basketTag = document.querySelector("#password");
 var copyCat = document.querySelector("#copy");
 
 pressIt.addEventListener("click", function() {
-    basketTag.textContent = "";
+    basketTag.innerHTML = "";
+    passWord = ("");
+    num = [];
     passType();
     generate();
     basketTag.textContent = passWord;
