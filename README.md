@@ -10,3 +10,6 @@ The user interface is responsive and neat. With the ability of repeatedlly gener
 
 User can also click copy button to copy the generated password, as the password could be hundreds of characters.
 
+![Image of user interface](https://andyyuan-oni.github.com/assets/userInterface_demo.png)
+
+ Have a try: https://andyyuan-oni.github.io/Password-Generator/
