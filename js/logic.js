@@ -44,7 +44,7 @@ function passType() {
         num.push(4);
     }
 }
-//console.log(passType());
+
 
 //generate random function calls for given times
 function generate() {
@@ -62,11 +62,9 @@ function generate() {
             passWord += ranNum();
         }
 
-        //passWord.concat(char);
     }
 }
-//console.log(generate());
-//console.log(passWord);
+
 //Called from outside
 var pressIt = document.querySelector("#generate");
 var basketTag = document.querySelector("#password");
@@ -77,6 +75,11 @@ pressIt.addEventListener("click", function() {
     passWord = ("");
     num = [];
     passType();
+    while (num.length == 0) {
+        alert("Must select at least one character type for password")
+        passType();
+    }
+
     generate();
     basketTag.textContent = passWord;
 });
